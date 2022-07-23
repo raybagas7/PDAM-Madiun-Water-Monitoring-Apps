@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "730063556872",
+    "firebase_url": "https://pdam-iot-65ebf-default-rtdb.firebaseio.com",
+    "project_id": "pdam-iot-65ebf",
+    "storage_bucket": "pdam-iot-65ebf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730063556872:android:a3814437a1d211d7b49cbd",
+        "android_client_info": {
+          "package_name": "com.ewsmonitorair"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730063556872-2a4mbf3167p3b2v2bt1ocu17lsnm1c58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyu4vZqsJ5G8FX1Kze1gz1shPNTokvsSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730063556872-2a4mbf3167p3b2v2bt1ocu17lsnm1c58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730063556872:android:a3424f4c4a66e528b49cbd",
+        "android_client_info": {
+          "package_name": "com.example.pdammadiun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730063556872-2a4mbf3167p3b2v2bt1ocu17lsnm1c58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyu4vZqsJ5G8FX1Kze1gz1shPNTokvsSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730063556872-2a4mbf3167p3b2v2bt1ocu17lsnm1c58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

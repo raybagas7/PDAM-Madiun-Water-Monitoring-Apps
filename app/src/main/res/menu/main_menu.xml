@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_quality"
+            android:icon="@drawable/quality_water"
+            android:title="Water Quality" />
+        <item
+            android:id="@+id/nav_debit"
+            android:icon="@drawable/debit_water"
+            android:title="Water Debit" />
+    </group>
+
+
+    <item
+        android:id="@+id/profile_item"
+        android:title="Profile">
+
+        <menu>
+            <group android:checkableBehavior="single">
+                <!--<item
+                    android:id="@+id/nav_profile"
+                    android:icon="@drawable/profile_pdam"
+                    android:title="Profile" />-->
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="Logout" />
+            </group>
+        </menu>
+
+    </item>
+
+
+</menu>

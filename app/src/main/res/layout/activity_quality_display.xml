@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QualityDisplayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/actual_content"
+            android:layout_alignTop="@+id/actual_content"
+            android:layout_alignRight="@id/actual_content"
+            android:layout_alignBottom="@id/actual_content"
+            android:layout_marginBottom="25dp"
+            android:background="@mipmap/roundcornerfbwave"/>
+
+            <LinearLayout
+                android:id="@+id/actual_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@mipmap/putihpdam" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/namalokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Alat"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:id="@+id/online_status_kualitas"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/namalokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_online_radio"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/offline_status_kualitas"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toEndOf="@+id/namalokasi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_offline_radio_filled"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:id="@+id/alamatlengkap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat Lengkap"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp">
+
+                    <Spinner
+                        android:id="@+id/listlokasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/style_spinner" />
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="3dp"
+                    android:elevation="60dp"
+                    app:cardCornerRadius="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:id="@+id/tambahlokasibaru"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/ic_tambahlokasi" />
+
+                        <ImageView
+                            android:id="@+id/recordqual"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:layout_toRightOf="@+id/tambahlokasibaru"
+                            android:src="@drawable/ic_recordlist" />
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="17dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:elevation="60dp"
+                app:cardCornerRadius="12dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#006BFF"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="TDS"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/gaugetds"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            app:gaugeEndValue="100"
+                            app:gaugePointEndColor="#006BFF"
+                            app:gaugePointStartColor="#006BFF"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#413BC6F3"
+                            app:gaugeStrokeWidth="5dp"
+                            app:gaugeSweepAngle="270" />
+
+                        <TextView
+                            android:id="@+id/nilaitds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="TDS"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:text="Max"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <EditText
+                            android:id="@+id/textmaxtds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#FFF"
+                            android:hint="Mx"
+                            android:inputType="number"
+                            android:padding="2dp"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:id="@+id/setmaxtds"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_checklist" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:elevation="60dp"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#006BFF"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Suhu"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/gaugesuhu"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            app:gaugeEndValue="100"
+                            app:gaugePointEndColor="#006BFF"
+                            app:gaugePointStartColor="#006BFF"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#413BC6F3"
+                            app:gaugeStrokeWidth="5dp"
+                            app:gaugeSweepAngle="270" />
+
+                        <TextView
+                            android:id="@+id/nilaitemperatur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="Suhu"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:text="Max"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <EditText
+                            android:id="@+id/textmaxsuhu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#FFF"
+                            android:hint="Mx"
+                            android:inputType="number"
+                            android:padding="2dp"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:id="@+id/setmaxsuhu"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_checklist" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:elevation="60dp"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#006BFF"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Turbidity"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/gaugeturbi"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            app:gaugeEndValue="100"
+                            app:gaugePointEndColor="#006BFF"
+                            app:gaugePointStartColor="#006BFF"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#413BC6F3"
+                            app:gaugeStrokeWidth="5dp"
+                            app:gaugeSweepAngle="270" />
+
+                        <TextView
+                            android:id="@+id/nilaiturbidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="Turbi"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:id="@+id/nilaivolt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:text="Volt"
+                            android:layout_marginRight="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:text="Max"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <EditText
+                            android:id="@+id/textmaxturbidity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#FFF"
+                            android:hint="Mx"
+                            android:inputType="number"
+                            android:padding="2dp"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:id="@+id/setmaxturbidity"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_checklist" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:elevation="60dp"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#006BFF"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="ORP"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/gaugeorp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            app:gaugeEndValue="100"
+                            app:gaugePointEndColor="#006BFF"
+                            app:gaugePointStartColor="#006BFF"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#413BC6F3"
+                            app:gaugeStrokeWidth="5dp"
+                            app:gaugeSweepAngle="270" />
+
+                        <TextView
+                            android:id="@+id/nilaiorp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="ORP"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:text="Max"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <EditText
+                            android:id="@+id/textmaxorp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#FFF"
+                            android:hint="Mx"
+                            android:inputType="number"
+                            android:padding="2dp"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:id="@+id/setmaxorp"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_checklist" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:elevation="60dp"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#006BFF"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="pH"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/gaugeph"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            app:gaugeEndValue="14"
+                            app:gaugePointEndColor="#22C55E"
+                            app:gaugePointStartColor="#22C55E"
+                            app:gaugeStartAngle="135"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#413BC6F3"
+                            app:gaugeStrokeWidth="5dp"
+                            app:gaugeSweepAngle="270" />
+
+                        <TextView
+                            android:id="@+id/nilaiph"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="pH"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center_horizontal"
+                        android:paddingBottom="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:text="Max"
+                            android:textColor="@color/black"
+                            android:textSize="12dp" />
+
+                        <EditText
+                            android:id="@+id/textmaxph"
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="#FFF"
+                            android:hint="Mx"
+                            android:inputType="number"
+                            android:padding="2dp"
+                            android:textSize="12dp" />
+
+                        <ImageView
+                            android:id="@+id/setmaxph"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_checklist" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:elevation="60dp"
+                app:cardCornerRadius="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:text="Jenis Sumur"
+                        android:textColor="#006BFF"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <Spinner
+                        android:background="@drawable/style_spinner"
+                        android:id="@+id/spinnersumur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alignmentMode="alignMargins"
+            android:columnCount="1"
+            android:columnOrderPreserved="false"
+            android:rowCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                android:elevation="60dp"
+                app:cardCornerRadius="12dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#006BFF"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:text="Free Chlorine"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <pl.pawelkleczkowski.customgauge.CustomGauge
+                            android:id="@+id/kloringauge"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_centerHorizontal="true"
+                            app:gaugeEndValue="100"
+                            app:gaugePointEndColor="#EAB308"
+                            app:gaugePointStartColor="#EAB308"
+                            app:gaugeStartAngle="90"
+                            app:gaugeStartValue="0"
+                            app:gaugeStrokeCap="ROUND"
+                            app:gaugeStrokeColor="#413BC6F3"
+                            app:gaugeStrokeWidth="5dp"
+                            app:gaugeSweepAngle="360" />
+
+                        <TextView
+                            android:id="@+id/nilaiklorin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="Chlorine"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="17dp">
+
+            <Button
+                android:id="@+id/kirimqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Kirim" />
+
+            <ImageView
+                android:id="@+id/penyegaranquuality"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_refreshbutton" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
